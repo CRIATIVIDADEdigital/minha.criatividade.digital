@@ -33,12 +33,19 @@ Coded by www.creative-tim.com
   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="../assets/css/argon-design-system.css?v=1.2.2" rel="stylesheet" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap');
+   </style>
 </head>
 <style>
 .card-profile-image img {
   box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15) !important; 
 }
 
+.certificado {
+  /* para usar no queryselector */
+}
 .card-profile-image {
   position: relative;
 }
@@ -83,45 +90,19 @@ Coded by www.creative-tim.com
 
 </style>
 
-
 <style>
-.masonry-wrapper {
-  padding: 1.5em;
-  max-width: 960px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.masonry {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(100px,1fr));
-  grid-gap: 10px;
-  grid-auto-rows: 0;
-}
-@media only screen and (max-width: 1023px) and (min-width: 768px) {
-  .masonry {
-    grid-template-columns: repeat(2, minmax(100px,1fr));
+  .badge-na-home {
+    width:210px; 
+    height:210px;
+    padding: 10px;
   }
-}
-@media only screen and (min-width: 1024px) {
-  .masonry {
-    grid-template-columns: repeat(3, minmax(100px,1fr));
+  .certificado-na-home {
+    padding: 10px;
   }
-}
-.masonry-item, .masonry-item-certific, .masonry-content {
-  border-radius: 4px;
-  overflow: hidden;
-}
-.masonry-item, .masonry-item-certific {
-  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, .3));
-  transition: filter .25s ease-in-out;
-}
-.masonry-item-certific {
-  width: 100%;
-}
-.masonry-item:hover {
-  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, .3));
-}
-
+  .certificado {
+    width: 100%;
+    height: 100%;
+  }
 </style>
 
 <body class="landing-page">
@@ -171,14 +152,13 @@ Coded by www.creative-tim.com
                       <div class="col">
                         <div class="card-profile-stats d-flex justify-content-center mt-md-5">
                           <div>
-                            <span class="heading">1</span>
-                            <span class="description">Certificado</span>
-                          </div>
-                          <div>
                             <span class="heading">2</span>
                             <span class="description">Badges</span>
                           </div>
-
+                          <div>
+                            <span class="heading">1</span>
+                            <span class="description">Certificado</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -196,14 +176,6 @@ Coded by www.creative-tim.com
             </div>
           </div>
         </div>
-
-
-
-
-
-
-
-
       </div>
       <div class="separator separator-bottom separator-skew zindex-100">
         <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -213,143 +185,36 @@ Coded by www.creative-tim.com
     </div>
 
 
-
-
     <div class="section features-1">
       <div class="container">
         <div class="row">
-          <center>
-            <div class="masonry-wrapper"><div class="masonry">
-              <div class="masonry-item-certific">
-                <img src="../assets/img/certificados/certificado.jpg" alt="Dummy Image" class="masonry-content">
+          &nbsp;&nbsp;&nbsp;<span class="badge badge-primary badge-pill mb-3">Badges</span>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-sm-6 d-flex justify-content-center">
+                <img class="badge-na-home" src="../assets/img/certificados/badge-alfabetizacao-nome-proprio.jpg">
               </div>
-              <div class="masonry-item">
-                <img src="../assets/img/certificados/badge.png" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/280?image=300" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/540?image=400" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/380?image=500" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/300?image=600" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/400?image=700" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/300?image=800" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/280?image=900" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/480?image=925" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/550?image=950" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/600?image=1000" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/325?image=25" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/450?image=50" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/280?image=75" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/540?image=100" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/380?image=125" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/300?image=161" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/400?image=175" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/300?image=200" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/280?image=225" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/480?image=250" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/550?image=275" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/600?image=300" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/325?image=13" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/450?image=26" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/280?image=39" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/540?image=52" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/380?image=65" alt="Dummy Image" class="masonry-content">
-              </div>
-              <div class="masonry-item">
-                <img src="https://picsum.photos/450/300?image=78" alt="Dummy Image" class="masonry-content">
+              <div class="col-lg-4 col-sm-6 d-flex justify-content-center">
+                <img class="badge-na-home" src="../assets/img/certificados/badge-o-nome-da-gente-1.jpg">
               </div>
             </div>
+            <div class="row"></div>
         </div>
 
+        </div>
+      </div>
+      <br />
+      <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <div class="info">
-              <div class="icon icon-lg icon-shape icon-shape-primary shadow rounded-circle">
-                <i class="ni ni-settings-gear-65"></i>
+          &nbsp;&nbsp;&nbsp;<span class="badge badge-primary badge-pill mb-3">Certificados</span>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-sm-6 d-flex justify-content-center certificado-na-home ">
+                <img class = "certificado" src="../assets/img/certificados/Importancia-nome-alfabetizacao-pq.jpg">
               </div>
-              <h6 class="info-title text-uppercase text-primary">Social Conversations</h6>
-              <p class="description opacity-8">We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand.</p>
-              <a href="javascript:;" class="text-primary">More about us
-                <i class="ni ni-bold-right text-primary"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="info">
-              <div class="icon icon-lg icon-shape icon-shape-success shadow rounded-circle">
-                <i class="ni ni-atom"></i>
-              </div>
-              <h6 class="info-title text-uppercase text-success">Analyze Performance</h6>
-              <p class="description opacity-8">Don't get your heart broken by people we love, even that we give them all we have. Then we lose family over time. As we live, our hearts turn colder.</p>
-              <a href="javascript:;" class="text-primary">Learn about our products
-                <i class="ni ni-bold-right text-primary"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="info">
-              <div class="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle">
-                <i class="ni ni-world"></i>
-              </div>
-              <h6 class="info-title text-uppercase text-warning">Measure Conversions</h6>
-              <p class="description opacity-8">What else could rust the heart more over time? Blackgold. The time is now for it to be okay to be great. or being a bright color. For standing out.</p>
-              <a href="javascript:;" class="text-primary">Check our documentation
-                <i class="ni ni-bold-right text-primary"></i>
-              </a>
-            </div>
-          </div>
+            <div class="row"></div>
+        </div>
+
         </div>
       </div>
     </div>
@@ -416,9 +281,12 @@ Coded by www.creative-tim.com
   <script src="../assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
   <script src="../assets/js/plugins/bootstrap-datepicker.min.js"></script>
   
-  <script src="../assets/js/masonry.pkgd.min.js"></script>
   <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="../assets/js/masonry-aux.js"></script>
+  <script>
+    imagesLoaded( document.querySelector('.certificado'), function( instance ) {
+      console.log('all images are loaded');
+    });
+  </script>
     
   <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
     <script src="../assets/js/argon-design-system.min.js?v=1.2.2" type="text/javascript"></script>
