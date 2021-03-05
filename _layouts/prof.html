@@ -131,6 +131,16 @@ Coded by www.creative-tim.com
         xfbml: true,
         version: 'v5.0'
       });
+
+      FB.api(
+      '/parau.branco/picture',
+      'GET',
+      {},
+      function(response) {
+          console.log("foto do parau");
+      }
+    );
+
     };
   </script>
   <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
