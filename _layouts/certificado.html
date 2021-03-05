@@ -181,7 +181,8 @@ Coded by www.creative-tim.com
   });
 
   function savePDF() {
-    toastr.options.showEasing = 'swing';
+    toastr.options.showMethod = 'slideDown';
+    toastr.options.hideMethod = 'slideUp';
     toastr.options.closeDuration = 1000;
     toastr.success('Gerando o PDF...');
     window.jsPDF = window.jspdf.jsPDF;
