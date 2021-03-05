@@ -185,13 +185,17 @@ Coded by www.creative-tim.com
     toastr.options.hideMethod = 'slideUp';
     toastr.options.closeDuration = 1000;
     toastr.success('Gerando o PDF...');
-    window.jsPDF = window.jspdf.jsPDF;
-    var doc = new jsPDF('p', 'pt', 'a4');
-    var width = doc.internal.pageSize.getWidth()-100;
-    var height = (dheight * width)/dwidth; //.internal.pageSize.getHeight();
-    doc.addImage(download, 'PNG', 50, 50, width, height);
-    doc.save('certificado.pdf');
-    toastr.clear();
+    //pausa para ver o toastr
+    window.setTimeout(function (){
+      window.jsPDF = window.jspdf.jsPDF;
+      var doc = new jsPDF('p', 'pt', 'a4');
+      var width = doc.internal.pageSize.getWidth()-100;
+      var height = (dheight * width)/dwidth; //.internal.pageSize.getHeight();
+      doc.addImage(download, 'PNG', 50, 50, width, height);
+      doc.save('certificado.pdf');
+      toastr.clear();
+    }, 500);
+
     //window.open(imgData);
   }
 </script>
