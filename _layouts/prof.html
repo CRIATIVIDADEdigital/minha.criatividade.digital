@@ -137,7 +137,14 @@ Coded by www.creative-tim.com
       'GET',
       {},
       function(response) {
-          console.log("foto do parau");
+        if (response && !response.error) {
+          document.getElementById("pic").src = response.url;
+          console.log(response.url);
+        }
+        else {
+          console.log("Facebook picture request error ", response.error);
+        }
+          
       }
     );
 
@@ -176,7 +183,7 @@ Coded by www.creative-tim.com
                     <div class="col-lg-3 order-lg-2">
                       <div class="card-profile-image">
                         <a href="#">
-                          <img src="{{ page.pic }}" class="rounded-circle">
+                          <img id="pic" src="{{ page.pic }}" class="rounded-circle">
                         </a>
                       </div>
                     </div>
