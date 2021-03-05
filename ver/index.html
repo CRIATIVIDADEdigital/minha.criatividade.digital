@@ -1,0 +1,12 @@
+<script>
+var url_string = window.location.href;
+var urlSplit = url_string.split('?');
+var url1 = urlSplit[0];
+var url2 = urlSplit[1];
+//Verifica se foi passado parametro
+  if (url2 == null || url2 == "") window.location.href = "https://eventos.aprender.digital";
+//redireciona para a pasta correta
+  var letra = url2.substring(0,1);
+  window.location.href = "/ver/" + letra + "/" + url2;
+</script>
+Oi
