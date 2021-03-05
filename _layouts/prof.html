@@ -42,6 +42,15 @@ Coded by www.creative-tim.com
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap');
    </style>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-09PLFELPRF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-09PLFELPRF');
+    </script>
 </head>
 <style>
 .card-profile-image img {
@@ -111,6 +120,20 @@ Coded by www.creative-tim.com
 </style>
 
 <body class="landing-page">
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v5.0&appId=2385506498151963&autoLogAppEvents=1"></script>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '2385506498151963',
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: 'v5.0'
+      });
+    };
+  </script>
+  <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 
 
 
@@ -143,7 +166,7 @@ Coded by www.creative-tim.com
                     <div class="col-lg-3 order-lg-2">
                       <div class="card-profile-image">
                         <a href="#">
-                          <img src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-4.jpg" class="rounded-circle">
+                          <img src="{{ page.pic }}" class="rounded-circle">
                         </a>
                       </div>
                     </div>
@@ -157,11 +180,11 @@ Coded by www.creative-tim.com
                       <div class="col">
                         <div class="card-profile-stats d-flex justify-content-center mt-md-5">
                           <div>
-                            <span class="heading">2</span>
+                            <span class="heading">{{ page.badges.size }}</span>
                             <span class="description">Badges</span>
                           </div>
                           <div>
-                            <span class="heading">1</span>
+                            <span class="heading">{{ page.certificados.size }}</span>
                             <span class="description">Certificado</span>
                           </div>
                         </div>
@@ -169,11 +192,13 @@ Coded by www.creative-tim.com
                     </div>
                     <div class="text-center">
                       <h3>
-                        Jessica Jones<span class="font-weight-light">, 27</span>
+                        {{ page.nome }}
                       </h3>
+                      {% if page.local %}
                       <div class="h5 font-weight-300">
-                        <i class="ni location_pin mr-2"></i>Bucharest, Romania
+                        <i class="ni location_pin mr-2"></i>{{ page.local }}
                       </div>
+                      {% endif %}
                     </div>
                   </div>
                 </div>
@@ -192,17 +217,40 @@ Coded by www.creative-tim.com
 
     <div class="section features-1">
       <div class="container">
-        <div class="row">
+        <div id="badges" class="row">
           &nbsp;&nbsp;&nbsp;<span class="badge badge-primary badge-pill mb-3">Badges</span>
           <div class="container">
-            <div class="row">
-              <div class="col-lg-4 col-sm-6 d-flex justify-content-center">
-                <img class="badge-na-home" src="/assets/img/certificados/badge-alfabetizacao-nome-proprio.jpg">
+            {% assign colunas = 1 %}            
+            {% for badge in page.badges %}
+
+              {% if colunas == 1 %}
+              <div class="row">
+              {% assign divfinal = 'aberto' %}
+              {% endif %}
+
+                <div class="col-lg-4 col-sm-6 d-flex justify-content-center">
+                  <a href="bg-{{ badge.nome }}.html ">
+                    <img class="badge-na-home" src="/assets/img/certificados/badge-{{ badge.nome }}.jpg">
+                  </a>
+                </div>
+
+              {% if colunas == 3 %}
               </div>
-              <div class="col-lg-4 col-sm-6 d-flex justify-content-center">
-                <img class="badge-na-home" src="/assets/img/certificados/badge-o-nome-da-gente-1.jpg">
-              </div>
+              {% assign divfinal = 'fechado' %}
+              {% endif %}
+
+              {% if colunas == 3 %}
+                {% assign colunas = 1 %}
+              {% else %}
+                {% assign colunas = colunas | plus: 1 %}  
+              {% endif %}  
+                      
+            {% endfor %}
+
+            {% if divfinal == 'aberto'%}
             </div>
+            {% endif %}
+
             <div class="row"></div>
         </div>
 
@@ -210,15 +258,40 @@ Coded by www.creative-tim.com
       </div>
       <br />
       <div class="container">
-        <div class="row">
+        <div id="certificados" class="row">
           &nbsp;&nbsp;&nbsp;<span class="badge badge-primary badge-pill mb-3">Certificados</span>
           <div class="container">
-            <div class="row">
-              <div class="col-lg-4 col-sm-6 d-flex justify-content-center certificado-na-home ">
-                <a href="importancia-do-nome.html">
-                  <img class = "certificado" src="/assets/img/certificados/Importancia-nome-alfabetizacao-pq.jpg">
-                </a>
+            {% assign colunas = 1 %}            
+            {% for certificado in page.certificados %}
+
+              {% if colunas == 1 %}
+              <div class="row">
+              {% assign divfinal = 'aberto' %}
+              {% endif %}
+
+                <div class="col-lg-4 col-sm-6 d-flex justify-content-center certificado-na-home ">
+                  <a href="cert-importancia-nome-proprio.html ">
+                    <img class = "certificado" src="/assets/img/certificados/{{ certificado.nome }}-pq.jpg">
+                  </a>
+                </div>
+
+              {% if colunas == 3 %}
               </div>
+              {% assign divfinal = 'fechado' %}
+              {% endif %}
+
+              {% if colunas == 3 %}
+                {% assign colunas = 1 %}
+              {% else %}
+                {% assign colunas = colunas | plus: 1 %}  
+              {% endif %}  
+                      
+            {% endfor %}
+
+            {% if divfinal == 'aberto'%}
+            </div>
+            {% endif %}
+
             <div class="row"></div>
         </div>
 
@@ -228,46 +301,17 @@ Coded by www.creative-tim.com
     <br /><br />
     <footer class="footer">
       <div class="container">
-        <div class="row row-grid align-items-center mb-5">
-          <div class="col-lg-6">
-            <h3 class="text-primary font-weight-light mb-2">Thank you for supporting us!</h3>
-            <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms.</h4>
-          </div>
-          <div class="col-lg-6 text-lg-center btn-wrapper">
-            <button target="_blank" href="https://twitter.com/creativetim" rel="nofollow" class="btn btn-icon-only btn-twitter rounded-circle" data-toggle="tooltip" data-original-title="Follow us">
-              <span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
-            </button>
-            <button target="_blank" href="https://www.facebook.com/CreativeTim/" rel="nofollow" class="btn-icon-only rounded-circle btn btn-facebook" data-toggle="tooltip" data-original-title="Like us">
-              <span class="btn-inner--icon"><i class="fab fa-facebook"></i></span>
-            </button>
-            <button target="_blank" href="https://dribbble.com/creativetim" rel="nofollow" class="btn btn-icon-only btn-dribbble rounded-circle" data-toggle="tooltip" data-original-title="Follow us">
-              <span class="btn-inner--icon"><i class="fa fa-dribbble"></i></span>
-            </button>
-            <button target="_blank" href="https://github.com/creativetimofficial" rel="nofollow" class="btn btn-icon-only btn-github rounded-circle" data-toggle="tooltip" data-original-title="Star on Github">
-              <span class="btn-inner--icon"><i class="fa fa-github"></i></span>
-            </button>
-          </div>
-        </div>
         <hr>
         <div class="row align-items-center justify-content-md-between">
           <div class="col-md-6">
             <div class="copyright">
-              &copy; 2020 <a href="" target="_blank">Creative Tim</a>.
+              &copy; 2021  <a href="https://www.facebook.com/ACriatividadeDigital" target="_blank">CRIATIVIDADE.digital</a>.
             </div>
           </div>
           <div class="col-md-6">
             <ul class="nav nav-footer justify-content-end">
               <li class="nav-item">
-                <a href="" class="nav-link" target="_blank">Creative Tim</a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link" target="_blank">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link" target="_blank">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link" target="_blank">License</a>
+                Design based on <b>Creative Tim</b>.
               </li>
             </ul>
           </div>
