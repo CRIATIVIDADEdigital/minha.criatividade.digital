@@ -44,6 +44,7 @@ Coded by www.creative-tim.com
       }
     });
   </script>
+  <link href="../assets/css/toastr.min.css" rel="stylesheet"/>
 </head>
 
 
@@ -146,6 +147,8 @@ Coded by www.creative-tim.com
   </script>
 
 <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="../assets/js/toastr.min.js"></script>
+
 
 
 <script>
@@ -178,12 +181,16 @@ Coded by www.creative-tim.com
   });
 
   function savePDF() {
+    toastr.options.showEasing = 'swing';
+    toastr.options.closeDuration = 1000;
+    toastr.success('Gerando o PDF...');
     window.jsPDF = window.jspdf.jsPDF;
     var doc = new jsPDF('p', 'pt', 'a4');
     var width = doc.internal.pageSize.getWidth()-100;
     var height = (dheight * width)/dwidth; //.internal.pageSize.getHeight();
     doc.addImage(download, 'PNG', 50, 50, width, height);
     doc.save('certificado.pdf');
+    toastr.clear();
     //window.open(imgData);
   }
 </script>
