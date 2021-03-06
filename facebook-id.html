@@ -6,7 +6,6 @@
 </head>
 <body>
 <script>
-  var objfacebook;
   function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
     console.log('statusChangeCallback');
     console.log(response);                   // The current login status of the person.
@@ -45,8 +44,7 @@
     FB.api('/me', function(response) {
       console.log('Você está logado com o usuário: ' + response.name);
       document.getElementById('status').innerHTML =
-        'Você está logado com o usuário:, ' + response.name + '!' + ' Seu ID é: ' + response.userID;
-        objfacebook = response;
+        'Você está logado com o usuário:, ' + response.name + '!' + ' Seu ID é: ' + id;
     });
   }
 
