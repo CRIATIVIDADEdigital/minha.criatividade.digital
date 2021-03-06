@@ -44,7 +44,7 @@
     FB.api('/me', function(response) {
       console.log('Você está logado com o usuário: ' + response.name);
       document.getElementById('status').innerHTML =
-        'Você está logado com o usuário:, ' + response.name + '!' + ' Seu ID é: ' + response.id;
+        'Você está logado com o usuário:, ' + response.name + '!' + '<br /> Seu Facebook ID é: ' + response.id;
     });
   }
 
