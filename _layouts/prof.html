@@ -139,7 +139,7 @@ Coded by www.creative-tim.com
       function(response) {
         if (response && !response.error) {
           document.getElementById("pic").src = response.url;
-          console.log(response.url);
+          console.log(response);
         }
         else {
           console.log("Facebook picture request error ", response.error);
