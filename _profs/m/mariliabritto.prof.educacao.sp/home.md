@@ -1,10 +1,10 @@
 ---
 layout: prof
-nome: Erica do Rocio de Lima
+permalink: /ver/m/mariliabritto.prof.educacao.sp/index.html 
+nome: Marilia Santoro Britto
 pic: /assets/img/user.jpg
-id-aluno: ericarlima100-yahoo
-permalink: /ver/e/ericarlima100-yahoo/index.html 
-id-certificado: 202102230101
+id-aluno: mariliabritto.prof.educacao.sp
+id-certificado: 202102230103
 certificados:
   - nome: importancia-nome-alfabetizacao
 badges:
