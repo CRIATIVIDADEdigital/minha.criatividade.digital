@@ -41,11 +41,11 @@
   };
  
   function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-    console.log('Welcome!  Fetching your information.... ');
+    console.log('Bem-vindo!  Buscando por suas informações no Facebook... ');
     FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
+      console.log('Você está logado com o usuário: ' + response.name);
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+        'Você está logado com o usuário:, ' + response.name + '!' + ' Seu ID é: ' + response.userID;
     });
   }
 
