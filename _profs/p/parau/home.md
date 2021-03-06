@@ -1,7 +1,7 @@
 ---
 layout: prof
 permalink: /ver/p/parau/index.html
-instagram: parau.branco
+facebook-pic: 100000012798420
 nome: Parahuari Branco
 pic: /assets/img/user.jpg
 id-aluno: parau
