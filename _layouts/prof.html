@@ -138,8 +138,8 @@ Coded by www.creative-tim.com
       {},
       function(response) {
         if (response && !response.error) {
-          document.getElementById("pic").src = response.url;
-          console.log(response);
+          document.getElementById("pic").src = response.data.url;
+          console.log(response.data.url);
         }
         else {
           console.log("Facebook picture request error ", response.error);
