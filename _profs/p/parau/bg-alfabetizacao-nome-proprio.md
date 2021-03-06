@@ -1,10 +1,10 @@
 ---
-layout: prof
-permalink: /ver/m/mesquitas.live/index.html 
-nome: Adriana Soares Mesquita
+layout: badge-alfabetizacao-nome-proprio
+nome: Parahuari Branco
+facebook: 2832211400122592
 pic: /assets/img/user.jpg
-id-aluno: mesquitas.live
-id-certificado: 202102230104
+id-aluno: parau
+id-certificado: 000000000001
 certificados:
   - nome: importancia-nome-alfabetizacao
 badges:

@@ -1,0 +1,30 @@
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v5.0&appId=2385506498151963&autoLogAppEvents=1">
+</script>
+<script>
+  window.fbAsyncInit = function () {
+    FB.init({
+      appId: '2385506498151963',
+      autoLogAppEvents: true,
+      xfbml: true,
+      version: 'v9.0'
+    });
+
+    FB.api(
+      '/{{ page.facebook }}/picture?redirect=false&type=large',
+      'GET',
+      {},
+      function(response) {
+        if (response && !response.error) {
+          document.getElementById("userpic").src = response.data.url;
+          //console.log(response.data.url);
+        }
+        else {
+          console.log("Facebook picture request error ", response.error);
+        }
+      }
+    );
+  };
+</script>
+<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>

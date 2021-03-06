@@ -36,7 +36,8 @@ plugins:
 
 collections:
   profs:
-    output: true  
+    output: true
+    permalink: /ver/:path
 
 # Exclude from processing.
 # The following items will not be processed, by default.

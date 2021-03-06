@@ -63,44 +63,15 @@ Coded by www.creative-tim.com
 
 
 <body class="landing-page">
-{% if page.facebook-pic %}
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous"
-    src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v5.0&appId=2385506498151963&autoLogAppEvents=1">
-  </script>
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        appId: '2385506498151963',
-        autoLogAppEvents: true,
-        xfbml: true,
-        version: 'v5.0'
-      });
-
-      FB.api(
-        '/{{ page.facebook-pic }}/picture?redirect=false&type=large',
-        'GET',
-        {},
-        function(response) {
-          if (response && !response.error) {
-            document.getElementById("pic").src = response.data.url;
-            console.log(response.data.url);
-          }
-          else {
-            console.log("Facebook picture request error ", response.error);
-          }
-        }
-      );
-    };
-  </script>
-  <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+{% if page.facebook %}
+  {% include facebook.html %}
 {% endif %}
 
   <!-- Navbar -->
   <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-dark bg-primary py-2">
     <div class="container">
       <a class="navbar-brand mr-lg-5" href="/ver?{{ page.id-aluno }}#certificados">
-        <img id="pic" class="rounded-circle" src="{{ page.pic }}">
+        <img id="userpic" class="rounded-circle" src="{{ page.pic }}">
         &nbsp;&nbsp;{{ page.nome }}
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">

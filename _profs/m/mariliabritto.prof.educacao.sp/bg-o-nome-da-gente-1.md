@@ -1,6 +1,5 @@
 ---
 layout: badge-nome-da-gente-1
-permalink: /ver/m/mariliabritto.prof.educacao.sp/bg-o-nome-da-gente-1.html 
 nome: Marilia Santoro Britto
 pic: /assets/img/user.jpg
 id-aluno: mariliabritto.prof.educacao.sp

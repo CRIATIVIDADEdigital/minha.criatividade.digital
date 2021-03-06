@@ -1,6 +1,5 @@
 ---
-layout: badge-alfabetizacao-nome-proprio
-permalink: /ver/m/mesquitas.live/bg-alfabetizacao-nome-proprio.html 
+layout: prof
 nome: Adriana Soares Mesquita
 pic: /assets/img/user.jpg
 id-aluno: mesquitas.live

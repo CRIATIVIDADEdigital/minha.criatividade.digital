@@ -1,10 +1,9 @@
 ---
 layout: prof
-permalink: /ver/v/vanyareis.yahoo/index.html 
-nome: Vanessa Oliveira
+nome: Erica do Rocio de Lima
 pic: /assets/img/user.jpg
-id-aluno: vanyareis-yahoo
-id-certificado: 202102230103
+id-aluno: ericarlima100.yahoo
+id-certificado: 202102230101
 certificados:
   - nome: importancia-nome-alfabetizacao
 badges:

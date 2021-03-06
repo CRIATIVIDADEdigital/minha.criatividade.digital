@@ -1,6 +1,5 @@
 ---
 layout: certificado-importancia-do-nome
-permalink: /ver/m/mariliabritto.prof.educacao.sp/cert-importancia-nome-proprio.html 
 nome: Marilia Santoro Britto
 pic: /assets/img/user.jpg
 id-aluno: mariliabritto.prof.educacao.sp

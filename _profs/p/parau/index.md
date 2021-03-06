@@ -1,7 +1,7 @@
 ---
-layout: badge-nome-da-gente-1
-permalink: /ver/p/parau/bg-o-nome-da-gente-1.html 
+layout: prof
 nome: Parahuari Branco
+facebook: 2832211400122592
 pic: /assets/img/user.jpg
 id-aluno: parau
 id-certificado: 000000000001

@@ -1,6 +1,5 @@
 ---
 layout: badge-nome-da-gente-1
-permalink: /ver/m/mesquitas.live/bg-o-nome-da-gente-1.html 
 nome: Adriana Soares Mesquita
 pic: /assets/img/user.jpg
 id-aluno: mesquitas.live

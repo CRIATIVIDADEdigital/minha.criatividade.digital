@@ -1,11 +1,9 @@
 ---
-layout: prof
-permalink: /ver/p/parau/index.html
-facebook-pic: 2832211400122592
-nome: Parahuari Branco
+layout: certificado-importancia-do-nome
+nome: Adriana Soares Mesquita
 pic: /assets/img/user.jpg
-id-aluno: parau
-id-certificado: 000000000001
+id-aluno: mesquitas.live
+id-certificado: 202102230104
 certificados:
   - nome: importancia-nome-alfabetizacao
 badges:

@@ -1,10 +1,9 @@
 ---
-layout: prof
-permalink: /ver/e/ericarlima100.yahoo/index.html 
-nome: Erica do Rocio de Lima
+layout: badge-alfabetizacao-nome-proprio
+nome: Adriana Soares Mesquita
 pic: /assets/img/user.jpg
-id-aluno: ericarlima100-yahoo
-id-certificado: 202102230101
+id-aluno: mesquitas.live
+id-certificado: 202102230104
 certificados:
   - nome: importancia-nome-alfabetizacao
 badges:

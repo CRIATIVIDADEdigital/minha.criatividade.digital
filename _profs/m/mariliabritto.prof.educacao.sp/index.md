@@ -1,6 +1,5 @@
 ---
-layout: badge-alfabetizacao-nome-proprio
-permalink: /ver/m/mariliabritto.prof.educacao.sp/bg-alfabetizacao-nome-proprio.html 
+layout: prof
 nome: Marilia Santoro Britto
 pic: /assets/img/user.jpg
 id-aluno: mariliabritto.prof.educacao.sp
