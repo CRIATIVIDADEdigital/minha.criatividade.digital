@@ -7,5 +7,6 @@ var url2 = urlSplit[1];
   if (url2 == null || url2 == "") window.location.href = "https://eventos.aprender.digital";
 //redireciona para a pasta correta
   var letra = url2.substring(0,1);
+  letra = letra.toLocaleLowerCase();
   window.location.href = "/ver/" + letra + "/" + url2;
 </script>
