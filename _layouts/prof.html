@@ -168,7 +168,12 @@ Coded by www.creative-tim.com
                       <div class="col">
                         <div class="card-profile-stats d-flex justify-content-center mt-md-5">
                           <div>
-                            <span class="heading">{{ page.badges.size }}</span>
+                            {% if page.badges.size > 0 %}
+                              <span class="heading">{{ page.badges.size }}</span>
+                            {% else %} 
+                              <span class="heading">0</span>
+                            {% endif %}
+
                             <span class="description">Badges</span>
                           </div>
                           <div>
@@ -205,45 +210,48 @@ Coded by www.creative-tim.com
 
     <div class="section features-1">
       <div class="container">
+        {% if page.badges.size > 0 %}
         <div id="badges" class="row">
           &nbsp;&nbsp;&nbsp;<span class="badge badge-primary badge-pill mb-3">Badges</span>
           <div class="container">
-            {% assign colunas = 1 %}            
-            {% for badge in page.badges %}
 
-              {% if colunas == 1 %}
-              <div class="row">
-              {% assign divfinal = 'aberto' %}
-              {% endif %}
+              {% assign colunas = 1 %}            
+              {% for badge in page.badges %}
 
-                <div class="col-lg-4 col-sm-6 d-flex justify-content-center">
-                  <a href="bg-{{ badge.nome }}.html ">
-                    <img class="badge-na-home" src="/assets/img/certificados/badge-{{ badge.nome }}.jpg">
-                  </a>
+                {% if colunas == 1 %}
+                <div class="row">
+                {% assign divfinal = 'aberto' %}
+                {% endif %}
+
+                  <div class="col-lg-4 col-sm-6 d-flex justify-content-center">
+                    <a href="bg-{{ badge.nome }}.html ">
+                      <img class="badge-na-home" src="/assets/img/certificados/badge-{{ badge.nome }}.jpg">
+                    </a>
+                  </div>
+
+                {% if colunas == 3 %}
                 </div>
+                {% assign divfinal = 'fechado' %}
+                {% endif %}
 
-              {% if colunas == 3 %}
+                {% if colunas == 3 %}
+                  {% assign colunas = 1 %}
+                {% else %}
+                  {% assign colunas = colunas | plus: 1 %}  
+                {% endif %}  
+                        
+              {% endfor %}
+
+              {% if divfinal == 'aberto'%}
               </div>
-              {% assign divfinal = 'fechado' %}
               {% endif %}
 
-              {% if colunas == 3 %}
-                {% assign colunas = 1 %}
-              {% else %}
-                {% assign colunas = colunas | plus: 1 %}  
-              {% endif %}  
-                      
-            {% endfor %}
-
-            {% if divfinal == 'aberto'%}
-            </div>
-            {% endif %}
 
             <div class="row"></div>
         </div>
-
-        </div>
+        {% endif %}
       </div>
+    </div>
       <br />
       <div class="container">
         <div id="certificados" class="row">
