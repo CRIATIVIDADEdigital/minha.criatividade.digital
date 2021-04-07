@@ -1,0 +1,347 @@
+<!--
+=========================================================
+* Argon Design System - v1.2.2
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-design-system
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>BADGES - {{ page.nome }}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:title" content="BADGES - {{ page.nome }}" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+
+  <meta property="og:image"         	content="https://minha.criatividade.digital/assets/img/certificados/badge-criatividade-digital-b.jpg" />
+  <meta property="og:image:type" 			content="image/jpeg" />
+  <meta property="og:image:width" 		content="1280" />
+  <meta property="og:image:height" 		content="720" />
+
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="/assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="/assets/css/font-awesome.css" rel="stylesheet" />
+  <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="/assets/css/argon-design-system.css?v=1.2.2" rel="stylesheet" />
+  <!-- carrega para "antecipar" a necessidade do fonte na página de certificado -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap');
+   </style>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-09PLFELPRF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-09PLFELPRF');
+    </script>
+</head>
+<style>
+.card-profile-image img {
+  box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15) !important; 
+}
+
+.certificado {
+  /* para usar no queryselector */
+}
+.card-profile-image {
+  position: relative;
+}
+
+.card-profile-image img {
+  position: absolute;
+  left: 50%;
+  max-width: 180px;
+  transition: all .15s ease;
+  transform: translate(-50%, -30%);
+  border-radius: .375rem;
+}
+
+.card-profile-image img:hover {
+  transform: translate(-50%, -33%);
+}
+
+.card-profile-stats {
+  padding: 1rem 0;
+}
+
+.card-profile-stats>div {
+  margin-right: 1rem;
+  padding: .875rem;
+  text-align: center;
+}
+
+.card-profile-stats>div:last-child {
+  margin-right: 0;
+}
+
+.card-profile-stats>div .heading {
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: block;
+}
+
+.card-profile-stats>div .description {
+  font-size: .875rem;
+  color: #adb5bd;
+}
+
+</style>
+
+<style>
+  .badge-na-home {
+    width:210px; 
+    height:210px;
+    padding: 10px;
+  }
+  .certificado-na-home {
+    padding: 10px;
+  }
+  .certificado {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<body class="landing-page">
+{% if page.facebook %}
+  {% include facebook.html %}
+{% endif %}
+
+
+  <div class="wrapper">
+    <div class="section section-hero section-shaped">
+      <div class="shape shape-style-3 shape-default">
+        <span class="span-150"></span>
+        <span class="span-50"></span>
+        <span class="span-50"></span>
+        <span class="span-75"></span>
+        <span class="span-100"></span>
+        <span class="span-75"></span>
+        <span class="span-50"></span>
+        <span class="span-100"></span>
+        <span class="span-50"></span>
+        <span class="span-100"></span>
+      </div>
+      <div class="page-header">
+
+
+
+
+        <div class="main-content">
+          <div class="container mt-7">
+            <!-- Table -->
+            <div class="row">
+              <div class="col-xl-8 m-auto order-xl-2 mb-5 mb-xl-0">
+                <div class="card card-profile shadow">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-3 order-lg-2">
+                      <div class="card-profile-image">
+                        <a href="#">
+                          <img id="userpic" src="{{ page.pic }}" class="rounded-circle">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                    <div class="d-flex justify-content-between">
+                    </div>
+                  </div>
+                  <div class="card-body pt-0 pt-md-4">
+                    <div class="row">
+                      <div class="col">
+                        <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                          <div>
+                            {% if page.badges.size > 0 %}
+                              <span class="heading">{{ page.badges.size }}</span>
+                            {% else %} 
+                              <span class="heading">0</span>
+                            {% endif %}
+                            {% if page.badges.size == 1 %} 
+                              <span class="description">Badge</span>
+                            {% elsif page.badges.size > 1 %}
+                              <span class="description">Badges</span>
+                            {% endif %}
+
+                          </div>
+                          <div>
+                            {% if page.certificados.size > 0 %}
+                              <span class="heading">{{ page.certificados.size }}</span>
+                            {% endif %}
+                            {% if page.certificados.size == 1 %} 
+                              <span class="description">Certificado</span>
+                            {% elsif page.certificados.size > 1 %}
+                              <span class="description">Certificados</span>
+                            {% endif %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <h3>
+                        {{ page.nome }}
+                      </h3>
+                      {% if page.local %}
+                      <div class="h5 font-weight-300">
+                        <i class="ni location_pin mr-2"></i>{{ page.local }}
+                      </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </div>
+
+
+    <div class="section features-1">
+      <div class="container">
+        {% if page.badges.size > 0 %}
+        <div id="badges" class="row">
+          &nbsp;&nbsp;&nbsp;<span class="badge badge-primary badge-pill mb-3">Badges</span>
+          <div class="container">
+
+              {% assign colunas = 1 %}            
+              {% for badge in page.badges %}
+
+                {% if colunas == 1 %}
+                <div class="row">
+                {% assign divfinal = 'aberto' %}
+                {% endif %}
+
+                  <div class="col-lg-4 col-sm-6 d-flex justify-content-center">
+                    <a href="bg-{{ badge.nome }}.html ">
+                      <img class="badge-na-home" src="/assets/img/certificados/badge-{{ badge.nome }}.jpg">
+                    </a>
+                  </div>
+
+                {% if colunas == 3 %}
+                </div>
+                {% assign divfinal = 'fechado' %}
+                {% endif %}
+
+                {% if colunas == 3 %}
+                  {% assign colunas = 1 %}
+                {% else %}
+                  {% assign colunas = colunas | plus: 1 %}  
+                {% endif %}  
+                        
+              {% endfor %}
+
+              {% if divfinal == 'aberto'%}
+              </div>
+              {% endif %}
+
+
+            <div class="row"></div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+      <br />
+      <div class="container">
+        <div id="certificados" class="row">
+          &nbsp;&nbsp;&nbsp;<span class="badge badge-primary badge-pill mb-3">Certificados</span>
+          <div class="container">
+            {% assign colunas = 1 %}            
+            {% for certificado in page.certificados %}
+
+              {% if colunas == 1 %}
+              <div class="row">
+              {% assign divfinal = 'aberto' %}
+              {% endif %}
+
+                  <div class="col-lg-4 col-sm-6 d-flex justify-content-center certificado-na-home">
+                  <a href="{{ certificado.nome }}.html ">
+                    <img class = "certificado" src="/assets/img/certificados/{{ certificado.nome }}-pq.png">
+                  </a>
+                </div>
+
+              {% if colunas == 3 %}
+              </div>
+              {% assign divfinal = 'fechado' %}
+              {% endif %}
+
+              {% if colunas == 3 %}
+                {% assign colunas = 1 %}
+              {% else %}
+                {% assign colunas = colunas | plus: 1 %}  
+              {% endif %}  
+                      
+            {% endfor %}
+
+            {% if divfinal == 'aberto'%}
+            </div>
+            {% endif %}
+
+            <div class="row"></div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <footer class="footer">
+      <div class="container">
+        <hr>
+        <div class="row align-items-center justify-content-md-between">
+          <div class="col-md-6">
+            <div class="copyright">
+              &copy; 2021  <a href="https://www.facebook.com/ACriatividadeDigital" target="_blank">CRIATIVIDADE.digital</a>.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <ul class="nav nav-footer justify-content-end">
+              <li class="nav-item">
+                Design based on <b>Creative Tim</b>.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="/assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="/assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="/assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="/assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <script src="/assets/js/plugins/moment.min.js"></script>
+  <script src="/assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
+  <script src="/assets/js/plugins/bootstrap-datepicker.min.js"></script>
+  
+   
+  <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+    <script src="/assets/js/argon-design-system.min.js?v=1.2.2" type="text/javascript"></script>
+</body>
+
+</html>
