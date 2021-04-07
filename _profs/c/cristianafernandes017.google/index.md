@@ -7,5 +7,5 @@ id-certificado: 202104010204
 certificados:
   - nome: certificado-app-leitura-2021-04-01
 badges:
-  - nome: read-along
+
 ---
