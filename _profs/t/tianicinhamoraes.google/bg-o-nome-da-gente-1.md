@@ -1,5 +1,5 @@
 ---
-layout: profv2
+layout: badge-nome-da-gente-1
 nome: Nicioni Ribeiro Moraes
 pic: /assets/img/user.jpg
 id-aluno: tianicinhamoraes.google
