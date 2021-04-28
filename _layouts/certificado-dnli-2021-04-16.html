@@ -1,0 +1,157 @@
+<!--
+=========================================================
+* Argon Design System - v1.2.2
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-design-system
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>CERTIFICADO - {{ page.nome }} - Dia Nacional do Livro Infantil</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:title" content="CERTIFICADO - {{ page.nome }} - APP para a Prática de Leiutra" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+
+  <meta property="og:image"         	content="https://minha.criatividade.digital/{{page.path}}dnli-2021-04-06{{page.id-aluno}}.jpg" />
+  <meta property="og:image:type" 			content="image/jpeg" />
+  <meta property="og:image:width" 		content="700" />
+  <meta property="og:image:height" 		content="300" />
+
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="/assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="/assets/css/font-awesome.css" rel="stylesheet" />
+  <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="/assets/css/argon-design-system.css?v=1.2.2" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.0/jspdf.umd.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Dancing Script']
+      }
+    });
+  </script>
+  <link href="/assets/css/toastr.min.css" rel="stylesheet"/>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-09PLFELPRF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-09PLFELPRF');
+  </script>
+</head>
+
+
+<body class="landing-page">
+{% if page.facebook %}
+  {% include facebook.html %}
+{% endif %}
+
+  <!-- Navbar -->
+  <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-dark bg-primary py-2">
+    <div class="container">
+      <a class="navbar-brand mr-lg-5" href="/ver?{{ page.id-aluno }}#certificados">
+        <img id="userpic" class="rounded-circle" src="{{ page.pic }}">
+        &nbsp;&nbsp;{{ page.nome }}
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  </nav>
+  <!-- End Navbar -->
+  
+  <div class="section features-1">
+    <div class="container">
+      <div class="row">
+        <div style="padding: 10px;">
+          <img id="certificado"  
+          width="100%" src="certificado-dnli-2021-04-16-{{page.id-aluno}}.jpg">
+          <div class = "text-right">
+            <a id="certificado-download" href="certificado-dnli-2021-04-16-{{page.id-aluno}}.pdf" class="badge badge-primary">PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 mx-auto text-center">
+          <h3 class="display-3">Agenda da Palestra</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="info">
+            <h6 class="info-title text-uppercase text-primary">Lenga-lengas</h6>
+              <ul>
+                <li  class="description opacity-8">Tipos.</li>
+                <li class="description opacity-8">Exemplos.</li>
+                <li class="description opacity-8">Livros e vídeos.</li>
+
+              </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info">
+            <h6 class="info-title text-uppercase text-success">Propostas de atividade</h6>
+            <ul>
+              <li  class="description opacity-8">Semana da lenga-lenga.</li>
+              <li class="description opacity-8">Produção textual - Presencial.</li>
+              <li class="description opacity-8">Produção textual - Remota.</li>
+              <li class="description opacity-8">Opções para Educação Infantil e séries iniciais.</li>
+            </ul>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info">
+            <h6 class="info-title text-uppercase text-warning">Livros</h6>
+            <ul>
+              <li  class="description opacity-8">A menina que não comia nada.</li>
+              <li class="description opacity-8">Capi, Capi, Capivara.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--   Core JS Files   -->
+  <script src="/assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="/assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="/assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="/assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <script src="/assets/js/plugins/moment.min.js"></script>
+  <script src="/assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
+  <script src="/assets/js/plugins/bootstrap-datepicker.min.js"></script>
+  <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+  <script src="/assets/js/argon-design-system.min.js?v=1.2.2" type="text/javascript"></script>
+
+<script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="/assets/js/toastr.min.js"></script>
+
+</body>
+
+</html>
