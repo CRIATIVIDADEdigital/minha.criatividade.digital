@@ -3,7 +3,7 @@ layout: profv2
 nome: Ana Júlia Fongaro
 facebook: 
 pic: /assets/img/user.jpg
-id-aluno: Ana Júlia Fongaro
+id-aluno: anajuliafongaro54.gmail.com
 id-certificado: 202204280402
 certificados:
   - nome: certificado-importancia-do-nome-2022-04-28
