@@ -1,5 +1,5 @@
 ---
-layout: certificado-importancia-do-nome-2022-04-28
+layout: badge-nome-da-gente-1
 nome: Marcela Luri Ando
 facebook: 
 pic: /assets/img/user.jpg
