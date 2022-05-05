@@ -1,8 +1,8 @@
 ---
 layout: certificado-importancia-do-nome-2022-04-28
-nome: Renan Moreira Pinto
+nome: Marco Aurélio Soares Fragoso
 facebook: 
 pic: /assets/img/user.jpg
-id-aluno: cr4zysh4dow.gmail.com
-id-certificado: 202204280434
+id-aluno: marco.fragoso.escola.pr.gov.br
+id-certificado: 202204280409
 ---
