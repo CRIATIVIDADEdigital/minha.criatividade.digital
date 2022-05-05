@@ -1,6 +1,6 @@
 ---
 layout: profv2
-nome: TERESA CRISTINA XAVIER RIBEIRO PINTO LEMOS
+nome: Teresa Cristina Xavier Ribeiro Pinto Lemos
 facebook:
 pic: /assets/img/user.jpg
 id-aluno: teresa.lemos.csanl.com
