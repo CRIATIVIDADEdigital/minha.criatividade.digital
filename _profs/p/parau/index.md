@@ -13,4 +13,5 @@ badges:
   - nome: alfabetizacao-nome-proprio
   - nome: o-nome-da-gente-1
   - nome: read-along
+  - nome: IA-intro
 ---
